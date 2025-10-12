@@ -1,6 +1,8 @@
 "use client";
 
+import { Maximize, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const ImageHero = () => {
@@ -13,7 +15,7 @@ const ImageHero = () => {
 				onClick={() => setOpenImg(true)}
 			>
 				<div className="absolute opacity-0 flex justify-center items-center group-hover:opacity-85 transition-opacity duration-500">
-					🥇
+					<Maximize size={30} />
 				</div>
 				<Image
 					src="/img/Hero.jpg"
@@ -27,9 +29,12 @@ const ImageHero = () => {
 				</div>
 			</div>
 			<div className=" w-full h-fit flex justify-center items-center flex-col mt-3">
-				<h2 className="text-[14px] font-bold tracking-wider font-sans">
+				<Link
+					href="/"
+					className="text-[14px] font-bold tracking-wider font-sans hover:text-[#ffc107] duration-300 "
+				>
 					Habib Ghulami
-				</h2>
+				</Link>
 				<p className="text-[14px] tracking-normal text-[#8c8c8e]  mt-[10px]  font-sans">
 					Front-End Developer
 				</p>
@@ -39,15 +44,15 @@ const ImageHero = () => {
 			</div>
 
 			{OpenImg && (
-				<div className="fixed top-0 left-0 opacity-100 bg-black w-full h-full flex justify-center items-center z-[999]">
-					<div className="flex justify-center items-center relative w-[60%] h-[90%]  bg-[#17171f] rounded-lg z-[999]">
+				<div className="fixed top-0 left-0 opacity-95 bg-black w-full h-full flex justify-center items-center ">
+					<div className="flex justify-center items-center relative w-[60%] h-[80%]  bg-[#17171f] rounded-lg ">
 						<div
-							className="flex justify-center items-center w-8 h-8 rounded-md cursor-pointer absolute top-2 right-2 bg-[#24242f] pb-1 "
+							className="flex justify-center items-center w-10 h-8 rounded-md cursor-pointer absolute top-2 right-2 bg-[#24242f] pb-1 "
 							onClick={() => setOpenImg(false)}
 						>
-							×
+							<X size={20} />
 						</div>
-						<div className="bg-sky-50 w-[40%] h-[80%] fixed rounded-xl overflow-hidden">
+						<div className="bg-sky-50 w-[45%] h-[70%] fixed rounded-xl overflow-hidden">
 							<Image src="/img/Hero.jpg" fill alt="Hero" />
 						</div>
 					</div>
