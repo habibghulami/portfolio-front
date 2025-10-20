@@ -1,10 +1,17 @@
+"use client";
+
+import { Maximize } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const HeroImg = () => {
+type ImagePop = {
+	OnChange: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const HeroImg = ({ OnChange }: ImagePop) => {
 	return (
-		<div className="w-full h-64 bg-[#252530] absolute top-0 left-0 opacity-98">
+		<div className="w-full h-64 bg-white dark:bg-[#252530] absolute top-0 left-0 opacity-98">
 			<div className="w-full h-fit flex justify-center items-center flex-col gap-4 pt-11">
 				<div className="w-fit h-fit flex justify-center items-center relative rounded-full">
 					<Image
@@ -26,6 +33,15 @@ const HeroImg = () => {
 						</div>
 						<div className="absolute top-26 bg-black/30 w-34 h-fit text-white/75 text-[10px] tracking-tight py-1 pl-1 opacity-0  translate-x-5 group-hover:opacity-80 group-hover:translate-x-0 duration-500 -mt-2.5 pointer-events-none">
 							i am available for freelance hire
+						</div>
+					</div>
+
+					<div
+						onClick={() => OnChange(true)}
+						className="w-full h-full flex justify-center items-center absolute group "
+					>
+						<div className="size-8 rounded-lg flex justify-center items-center bg-black/50 cursor-pointer opacity-0 pointer-events-none duration-300 group-hover:opacity-100 group-hover:pointer-events-auto">
+							<Maximize size={18} />
 						</div>
 					</div>
 				</div>
