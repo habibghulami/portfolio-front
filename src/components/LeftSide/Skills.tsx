@@ -46,6 +46,7 @@ const Skills = () => {
 					<ProgressBar
 						completed={presant}
 						animateOnRender={true}
+						transitionDuration="2s"
 						baseBgColor="#191923"
 						bgColor="#ffc107"
 						isLabelVisible={false}
