@@ -11,7 +11,7 @@ type ImagePop = {
 
 const HeroImg = ({ OnChange }: ImagePop) => {
 	return (
-		<div className="w-full h-64 bg-white dark:bg-[#252530] absolute top-0 left-0 opacity-98">
+		<div className="w-full h-64 bg-white dark:bg-[#252530] absolute top-0 left-0 opacity-98 z-[1]">
 			<div className="w-full h-fit flex justify-center items-center flex-col gap-4 pt-11">
 				<div className="w-fit h-fit flex justify-center items-center relative rounded-full">
 					<Image
@@ -40,7 +40,7 @@ const HeroImg = ({ OnChange }: ImagePop) => {
 						onClick={() => OnChange(true)}
 						className="w-full h-full flex justify-center items-center absolute group "
 					>
-						<div className="size-8 rounded-lg flex justify-center items-center bg-black/50 cursor-pointer opacity-0 pointer-events-none duration-300 group-hover:opacity-100 group-hover:pointer-events-auto">
+						<div className="size-8 rounded-lg flex justify-center items-center bg-white/50 dark:bg-black/50 cursor-pointer opacity-0 pointer-events-none duration-300 group-hover:opacity-100 group-hover:pointer-events-auto">
 							<Maximize size={18} />
 						</div>
 					</div>
