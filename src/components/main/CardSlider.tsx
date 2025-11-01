@@ -8,6 +8,7 @@ import { useRef } from "react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import { BsStarFill } from "react-icons/bs";
+import type { Swiper as SwiperType } from "swiper";
 
 type Cards = {
 	title: string;
@@ -48,7 +49,7 @@ const cards: Cards[] = [
 ];
 
 const CardSlider = () => {
-	const swiperRef = useRef<any>(null);
+	const swiperRef = useRef<SwiperType | null>(null);
 
 	return (
 		<div className="w-full h-fit pt-6  relative">
