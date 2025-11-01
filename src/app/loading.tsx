@@ -3,11 +3,7 @@
 import React from "react";
 
 const loading = () => {
-	return (
-		<div className="w-full h-screen bg-black text-white">
-			;sldkf;asdlfka;sld
-		</div>
-	);
+	return <div className="w-full h-screen bg-black text-white">loading ...</div>;
 };
 
 export default loading;
