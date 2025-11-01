@@ -26,7 +26,7 @@ const Layout = () => {
 
 			{imageopen && (
 				<div className="w-full h-screen bg-black/30 flex justify-center items-center fixed top-0 left-0 z-[9999]">
-					<div className="max-w-3xl xl:mx-0 mx-10 xl:max-w-7xl max-h-80 bg-amber-800 rounded-lg overflow-hidden relative border-2 border-white">
+					<div className="max-w-3xl xl:mx-0 mx-10 xl:max-w-7xl max-h-80 bg-black/80 rounded-lg overflow-hidden relative border-2 border-white">
 						<XIcon
 							onClick={() => setImageOpen(false)}
 							className="absolute right-3 top-3 duration-300 cursor-pointer text-gray-300 hover:text-white "
