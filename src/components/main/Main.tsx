@@ -3,6 +3,11 @@ import React from "react";
 import { CiMenuKebab } from "react-icons/ci";
 import { TypeAnimation } from "react-type-animation";
 import Experience from "./Experience";
+import Cards from "./Cards";
+import PricePlane from "./PricePlane";
+import CardSlider from "./CardSlider";
+import Brands from "./Brands";
+import Footer from "./Footer";
 
 type Props = {
 	setOpenLeft: React.Dispatch<React.SetStateAction<boolean>>;
@@ -119,8 +124,25 @@ const Main = ({
 					</div>
 				</div>
 
-				<div className="w-full h-fit flex justify-center items-center gap-x-1 px-8">
-					<Experience />
+				<div className="w-full h-fit px-4 md:px-8 ">
+					<div className="w-full h-fit ">
+						<Experience />
+					</div>
+					<div className="w-full h-fit ">
+						<Cards />
+					</div>
+					<div className="w-full h-fit ">
+						<PricePlane />
+					</div>
+					<div className="w-full h-fit ">
+						<CardSlider />
+					</div>
+					<div className="w-full h-fit ">
+						<Brands />
+					</div>
+					<div className="w-full h-fit ">
+						<Footer />
+					</div>
 				</div>
 			</div>
 		</div>
