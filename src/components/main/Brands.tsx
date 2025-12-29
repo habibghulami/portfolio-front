@@ -38,8 +38,8 @@ const Brands = () => {
 						<Image
 							src={Brand.img}
 							alt={Brand.title}
-							width={120}
-							height={120}
+							width={150}
+							height={150}
 							className="opacity-60 hover:opacity-100 duration-500 cursor-pointer"
 						/>
 					</div>

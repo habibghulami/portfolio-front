@@ -73,23 +73,24 @@ const Layout = () => {
 			{/* RIGHT SIDE */}
 
 			<aside
-				className={`min-h-screen absolute right-0 top-0  bg-[#20202a] xl:flex hidden transition-normal duration-500 ease-linear delay-75 ${
+				className={`min-h-screen absolute right-0 top-0 bg-[#20202a] xl:flex hidden transition-normal duration-500 ease-linear delay-75 z-100 ${
 					openRight ? "w-56" : "w-20"
 				}`}
 			>
 				<div
 					className={`absolute top-3 w-full h-20 shadow-md shadow-[#191923] flex items-center bg-[#252530]  `}
 				>
-					<div className=" w-full h-fit flex justify-start pl-7   ">
+					<div
+						className=" w-full h-fit flex justify-start pl-7"
+						onClick={() => setOpenRight(!openRight)}
+					>
 						{openRight ? (
 							<X
-								onClick={() => setOpenRight(!openRight)}
 								size={22}
 								className="text-[#858588] hover:text-white transition-all duration-500 cursor-pointer"
 							/>
 						) : (
 							<Menu
-								onClick={() => setOpenRight(!openRight)}
 								size={22}
 								className="text-[#858588] hover:text-white transition-all duration-500 cursor-pointer "
 							/>
