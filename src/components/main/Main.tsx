@@ -1,5 +1,4 @@
 import { Menu, X } from "lucide-react";
-import React from "react";
 import { CiMenuKebab } from "react-icons/ci";
 import { TypeAnimation } from "react-type-animation";
 import Experience from "./Experience";

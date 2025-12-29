@@ -10,7 +10,7 @@ const MobileMenu = ({ OpenR, OnChangeR }: RightMenu) => {
 		<>
 			<aside
 				onClick={() => OnChangeR(false)}
-				className={`min-h-screen absolute right-0 top-0 bg-[#20202a] xl:hidden flex transition-normal duration-500 ease-linear delay-75 z-50 ${
+				className={`min-h-screen absolute right-0 top-0 bg-[#20202a] xl:hidden flex transition-normal duration-500 ease-linear delay-75 ${
 					OpenR ? "w-48" : "w-0"
 				}`}
 			>

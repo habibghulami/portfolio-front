@@ -35,7 +35,7 @@ const Nav = ({ Value, OnChange }: IProp) => {
 	];
 
 	return (
-		<div className="w-full h-screen flex justify-center items-center px-4 flex-col">
+		<div className="w-full h-screen flex justify-center items-center px-4 flex-col ">
 			<div className="w-full h-fit gap-y-3 flex justify-center items-center flex-col pt-14 ">
 				{Nav.map(({ path, title }, i) => {
 					return (

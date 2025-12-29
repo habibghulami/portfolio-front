@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useRef } from "react";
@@ -52,7 +52,7 @@ const CardSlider = () => {
 	const swiperRef = useRef<SwiperType | null>(null);
 
 	return (
-		<div className="w-full h-fit pt-6  relative">
+		<div className="w-full h-fit pt-6 z-2 relative">
 			{/* Title */}
 			<div className="flex justify-start items-center mb-8">
 				<p className="font-bold text-xl px-[1px] ">Recommendations</p>
@@ -60,7 +60,7 @@ const CardSlider = () => {
 
 			{/* Swiper */}
 			<Swiper
-				modules={[Navigation, Pagination]}
+				modules={[Navigation]}
 				onBeforeInit={(swiper) => {
 					swiperRef.current = swiper;
 				}}
@@ -72,15 +72,12 @@ const CardSlider = () => {
 					1024: { slidesPerView: 2 },
 				}}
 				className="pb-10 grid md:grid-cols-2 grid-cols-1 z-10"
-				pagination={{
-					type: "bullets",
-				}}
 				unselectable="on"
 			>
 				{cards.map((card, index) => (
 					<SwiperSlide
 						key={index}
-						className="flex justify-center items-center  relative"
+						className="flex justify-center items-center relative z-10"
 					>
 						<div className="bg-[#2b2b36] text-white p-8 ">
 							<Image
@@ -100,22 +97,22 @@ const CardSlider = () => {
 							<p className="text-[#8c8a8e] text-sm mb-4 mt-2">
 								{card.description}
 							</p>
-							<span className="w-fit h-fit flex justify-center items-center gap-x-1 text-yellow-500 rounded-full mt-6 px-4 py-[7px] bg-[#191923]">
-								<BsStarFill size={11} />
-								<BsStarFill size={11} />
-								<BsStarFill size={11} />
-								<BsStarFill size={11} />
-								<BsStarFill size={11} />
+							<span className="w-fit h-fit flex justify-center items-center gap-x-1 text-[#ffc107] rounded-full mt-6 px-4 py-[7px] bg-[#191923]">
+								<BsStarFill size={12} />
+								<BsStarFill size={12} />
+								<BsStarFill size={12} />
+								<BsStarFill size={12} />
+								<BsStarFill size={12} />
 							</span>
 						</div>
 					</SwiperSlide>
 				))}
 			</Swiper>
 
-			<div className=" w-full flex justify-end items-center py-4 z-10 gap-x-4 px-2">
+			<div className=" w-full text-end flex justify-end gap-x-3 items-center pt-6 z-10 relative">
 				<button
 					onClick={() => swiperRef.current?.slidePrev()}
-					className="text-gray-500 hover:text-white duration-300 cursor-pointer"
+					className="text-gray-500 hover:text-white duration-300 cursor-pointer  "
 				>
 					<ArrowLeft size={18} />
 				</button>
